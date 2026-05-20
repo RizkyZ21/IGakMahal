@@ -1,0 +1,139 @@
+/* ============================================================
+   IGakMahal — Trust, Contact & Footer Styles
+   contact.css
+   ============================================================ */
+
+/* ── TRUST ── */
+.trust { background: var(--sage); color: #fff; }
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 56px;
+}
+
+.trust-item { text-align: center; }
+
+.trust-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--gold-light);
+}
+
+.trust-lbl {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 6px;
+}
+
+/* ── CONTACT ── */
+.contact { background: #fff; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  margin-top: 56px;
+  align-items: start;
+}
+
+.contact-info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 24px;
+  border-radius: 18px;
+  background: var(--cream);
+  border: 1px solid rgba(45, 90, 78, 0.08);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s;
+}
+.contact-item:hover {
+  background: var(--sage-pale);
+  border-color: var(--sage);
+  transform: translateX(4px);
+}
+
+.contact-icon {
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  background: var(--sage);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+.contact-icon.wa  { background: #25d366; }
+.contact-icon.ig  { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.contact-icon.tk  { background: #000; }
+
+.contact-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--slate);
+  margin-top: 2px;
+}
+
+.contact-cta-box {
+  background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+  border-radius: 28px;
+  padding: 48px 40px;
+  color: #fff;
+}
+
+.contact-cta-box h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.contact-cta-box p {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--slate);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 40px 48px;
+  text-align: center;
+}
+
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+footer p { font-size: 0.85rem; line-height: 1.7; }
+footer a { color: var(--gold-light); text-decoration: none; }
+
+@media (max-width: 900px) {
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+}

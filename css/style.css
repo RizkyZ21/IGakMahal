@@ -1,0 +1,138 @@
+/* ============================================================
+   IGakMahal — Main Stylesheet
+   style.css
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --cream: #faf7f2;
+  --warm-white: #fff9f3;
+  --soft-beige: #f0ebe2;
+  --blush: #e8ddd0;
+  --sage: #2d5a4e;
+  --sage-light: #3d7a68;
+  --sage-pale: #e8f2ee;
+  --gold: #b8922a;
+  --gold-light: #d4a93c;
+  --slate: #2b3a47;
+  --slate-mid: #4a5c6b;
+  --text-muted: #7a8a95;
+  --shadow-soft: 0 8px 40px rgba(45, 90, 78, 0.08);
+  --shadow-card: 0 4px 24px rgba(43, 58, 71, 0.08);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--cream);
+  color: var(--slate);
+  overflow-x: hidden;
+}
+
+/* ── SECTION COMMONS ── */
+section { padding: 100px 48px; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  color: var(--slate);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  font-size: 1rem;
+  color: var(--slate-mid);
+  line-height: 1.7;
+  max-width: 540px;
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+  background: var(--sage);
+  color: #fff;
+  padding: 15px 36px;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: all 0.25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(45, 90, 78, 0.3);
+}
+.btn-primary:hover {
+  background: var(--sage-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(45, 90, 78, 0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--sage);
+  border: 2px solid var(--sage);
+  padding: 13px 36px;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: all 0.25s;
+}
+.btn-secondary:hover {
+  background: var(--sage-pale);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: var(--sage);
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* ── ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 12px 24px; }
+  .nav-links { display: none; }
+  section { padding: 70px 24px; }
+}
