@@ -1,139 +1,165 @@
-/* ============================================================
-   IGakMahal — Trust, Contact & Footer Styles
-   contact.css
-   ============================================================ */
+.trust {
+  background: var(--ink);
+  color: #fff;
+}
 
-/* ── TRUST ── */
-.trust { background: var(--sage); color: #fff; }
+.trust-inner {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) 1.4fr;
+  align-items: end;
+  gap: 48px;
+}
+
+.trust .section-label {
+  color: var(--gold);
+}
+
+.trust .section-title {
+  color: #fff;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+}
 
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
-  margin-top: 56px;
+  gap: 10px;
 }
 
-.trust-item { text-align: center; }
-
-.trust-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: var(--gold-light);
+.trust-item {
+  min-height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.trust-lbl {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.75);
-  margin-top: 6px;
+.trust-item strong {
+  color: #fff;
+  font-size: clamp(1.45rem, 2.2vw, 2rem);
+  font-weight: 800;
+  line-height: 1;
 }
 
-/* ── CONTACT ── */
-.contact { background: #fff; }
+.trust-item span {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
 
-.contact-grid {
+.contact {
+  background: var(--surface);
+}
+
+.contact-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr minmax(320px, 470px);
   gap: 64px;
-  margin-top: 56px;
   align-items: start;
 }
 
-.contact-info-block {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.contact-copy {
+  max-width: 640px;
+}
+
+.contact-copy .section-sub {
+  margin-top: 18px;
+}
+
+.contact-panel {
+  border: 1px solid rgba(23, 25, 29, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8f6f1 100%);
+  box-shadow: var(--shadow-sm);
 }
 
 .contact-item {
   display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 20px 24px;
-  border-radius: 18px;
-  background: var(--cream);
-  border: 1px solid rgba(45, 90, 78, 0.08);
-  text-decoration: none;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: var(--radius);
+  padding: 18px;
   color: inherit;
-  transition: all 0.25s;
-}
-.contact-item:hover {
-  background: var(--sage-pale);
-  border-color: var(--sage);
-  transform: translateX(4px);
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.contact-icon {
-  width: 48px; height: 48px;
-  border-radius: 14px;
-  background: var(--sage);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.3rem;
-  flex-shrink: 0;
+.contact-item + .contact-item {
+  border-top: 1px solid var(--line);
 }
-.contact-icon.wa  { background: #25d366; }
-.contact-icon.ig  { background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-.contact-icon.tk  { background: #000; }
+
+.contact-item:hover {
+  background: var(--green-soft);
+  transform: translateX(2px);
+}
 
 .contact-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.contact-value {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--slate);
-  margin-top: 2px;
+.contact-item strong {
+  color: var(--ink);
+  font-size: 1.18rem;
+  font-weight: 800;
 }
 
-.contact-cta-box {
-  background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
-  border-radius: 28px;
-  padding: 48px 40px;
-  color: #fff;
+.contact-button {
+  width: 100%;
+  margin-top: 14px;
 }
 
-.contact-cta-box h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.contact-cta-box p {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.7;
-  margin-bottom: 28px;
-}
-
-/* ── FOOTER ── */
 footer {
-  background: var(--slate);
-  color: rgba(255, 255, 255, 0.6);
-  padding: 40px 48px;
+  display: grid;
+  gap: 8px;
+  padding: 42px 28px;
+  background: #111316;
+  color: rgba(255, 255, 255, 0.62);
   text-align: center;
 }
 
 .footer-brand {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 700;
   color: #fff;
-  margin-bottom: 10px;
+  font-size: 1.15rem;
+  font-weight: 800;
 }
 
-footer p { font-size: 0.85rem; line-height: 1.7; }
-footer a { color: var(--gold-light); text-decoration: none; }
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
 
-@media (max-width: 900px) {
-  .trust-grid { grid-template-columns: repeat(2, 1fr); }
-  .contact-grid { grid-template-columns: 1fr; }
+.copyright {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 980px) {
+  .trust-inner,
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-panel {
+    padding: 12px;
+  }
 }
